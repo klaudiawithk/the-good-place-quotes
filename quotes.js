@@ -295,6 +295,10 @@ module.exports = [
     {
         character: 'Chidi',
         quote: 'I have what doctors call "directional insanity". I once got lost on an escalator.'
+    },
+    {
+        character: 'Derek',
+        quote: 'Maximum Derek!'
     }
 ]
 

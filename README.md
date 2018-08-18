@@ -59,4 +59,5 @@ Currently supporting: Eleanor, Chidi, Tahani, Jason, Michael, Pillboi, Derek
 
 ## JavaScript demo
 [Demo app](https://good-place-quotes.glitch.me/) and [source code of demo](https://glitch.com/~good-place-quotes)
+
 The page is hosted on [glitch](https://glitch.com/) and I'm using `fetch` API to fetch data. 
