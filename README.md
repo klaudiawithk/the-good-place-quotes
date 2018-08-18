@@ -3,7 +3,7 @@ Because The Good Place is iconic.
 This is the simplest server.
 
 ## Production host
-[add link here]()
+[https://good-place-quotes.herokuapp.com/api](https://good-place-quotes.herokuapp.com/api)
 
 The `Access-Control-Allow-Origin` header is set to `*` so that you can make requests from any domain.
 
