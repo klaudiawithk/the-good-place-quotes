@@ -13,7 +13,7 @@ The `Access-Control-Allow-Origin` header is set to `*` so that you can make requ
 Returns an array with all quotes:
 ```javascript
 [
-	{
+    {
         character: 'Michael',
         quote: 'Any place or thing in the universe can be up to 104% perfect. That\'s how you get Beyoncé.'
     },
@@ -58,4 +58,5 @@ Currently supporting: Eleanor, Chidi, Tahani, Jason, Michael, Pillboi, Derek
 ```
 
 ## JavaScript demo
-[add link here]()
+[Demo app](https://good-place-quotes.glitch.me/) and [source code of demo](https://glitch.com/~good-place-quotes)
+The page is hosted on [glitch](https://glitch.com/) and I'm using `fetch` API to fetch data. 
