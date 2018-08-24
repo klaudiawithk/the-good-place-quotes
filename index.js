@@ -1,27 +1,23 @@
 const express = require('express');
-var path = require('path');
-const generator = require('./generator');
+const graphqlHTTP = require('express-graphql');
+const generator = require('./quotes/generator');
+const port = process.env.PORT || 8000;
+const schema = require('./schema/schema');
 
 const app = express();
-const port = process.env.PORT || 8000;
 
 app.all('*', function (req, res, next) {
 	res.set('Access-Control-Allow-Origin', '*');
 	next();
 });
 
-app.get('/api/random', function (req, res) {
-	res.send(generator.getRandom());
-});
+app.get('/api/random', (req, res) => res.send(generator.getRandom()));
+app.get('/api/character/:name', (req, res) => res.send(generator.getCharacter(req.params.name)));
+app.get('/api', (req, res) => res.send(generator.getAll()));
 
-app.get('/api/character/:name', function (req, res) {
-	res.send(generator.getCharacter(req.params.name));
-});
+app.use('/graphql', graphqlHTTP({
+    schema,
+    graphiql: true
+}));
 
-app.get('/api', function (req, res) {
-	res.send(generator.getAll());
-});
-
-app.listen(port, function () {
-	console.log('Server running on port', port);
-})
+app.listen(port, () => console.log(`Server running on ${port}`));
