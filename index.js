@@ -1,15 +1,14 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
+const cors = require('cors');
 const generator = require('./quotes/generator');
 const port = process.env.PORT || 8000;
 const schema = require('./schema/schema');
 
 const app = express();
 
-app.all('*', function (req, res, next) {
-	res.set('Access-Control-Allow-Origin', '*');
-	next();
-});
+app.options('*', cors());
+app.use(cors());
 
 app.get('/api/random', (req, res) => res.send(generator.getRandom()));
 app.get('/api/character/:name', (req, res) => res.send(generator.getCharacter(req.params.name)));
