@@ -3,6 +3,15 @@ Because The Good Place is iconic.
 
 This is the simplest server supporting both REST and GraphQL.
 
+### Table of contents
+
+<!--ts-->
+   * [Production host](#production-host)
+   * [Rest APIs](#rest-apis)
+   * [GraphQL](#GraphQL)
+   * [JavaScript demos](#javaScript-demos)
+<!--te-->
+
 ## Production host
 [https://good-place-quotes.herokuapp.com/](https://good-place-quotes.herokuapp.com/) 
 
@@ -59,6 +68,8 @@ Currently supporting: Eleanor, Chidi, Tahani, Jason, Michael, Pillboi, Derek
 ```
 
 ## GraphQL
+The endpoint for queries: [https://good-place-quotes.herokuapp.com/graphql](https://good-place-quotes.herokuapp.com/graphql)
+ 
 ### `QUERY quotes`
 To request all quotes, query `quotes`:
 ```
